@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profils/index'
   get '/profil/:profil_page_id', to: "profil#show"
   get '/', to: 'gossips#index'
   get '/welcome', to: 'gossips#index'
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'static#contact'
 
   resources :gossips 
- 
+  resources :profils
+  
 
 
 
